@@ -1,0 +1,10 @@
+cmake-build-debug/
+build/
+
+# IDE and editor
+*.idea/
+.*.swp
+
+# LibreOffice locks
+.~lock.*#
+

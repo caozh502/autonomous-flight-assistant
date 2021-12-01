@@ -1,0 +1,1 @@
+ros-noetic-desktop-full ros-noetic-hector-gazebo-plugins ros-noetic-joy ros-noetic-octomap-ros ros-noetic-mavlink libgoogle-glog-dev ros-noetic-mavros ros-noetic-nmea-comms libopencv-dev ros-noetic-tf2-tools ros-noetic-pcl-ros

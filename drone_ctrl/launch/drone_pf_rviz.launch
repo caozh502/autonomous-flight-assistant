@@ -1,0 +1,15 @@
+<launch>
+ <!-- 1st node -->
+
+ <node pkg="tf" type="static_transform_publisher" name="poincloud_tf_transform" args="0.20833718 0.08271715 -0.20692879 -0.0192265 0.1602928 0.0474881 camera_depth_optical_frame drone  30"/>
+
+     <node pkg="drone_ctrl" type="drone_Pathfinder" name="drone_Pathfinder" output="screen">
+     </node>
+ 
+  <!-- 2nd node -->
+  
+     <node pkg="rviz" type="rviz" name="rviz" args="-d $(find drone_ctrl)/rviz_pointcloud.rviz"/>
+     
+
+ 
+</launch>

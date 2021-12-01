@@ -1,0 +1,5 @@
+<RCC>
+<qresource prefix="/keyboard_rc_gui">
+        <file>keyboard_rc_gui.png</file>
+    </qresource>
+</RCC>

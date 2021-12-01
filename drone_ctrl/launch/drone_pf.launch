@@ -1,0 +1,13 @@
+<launch>
+ <!-- 1st node -->
+
+ 
+     <node pkg="drone_ctrl" type="drone_Pathfinder" name="drone_Pathfinder" output="screen">
+     </node>
+ 
+  <!-- 2nd node -->
+  
+  <node pkg="drone_ctrl" type="viewer" name="viewer" >
+  </node>
+ 
+</launch>

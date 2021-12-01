@@ -1,0 +1,182 @@
+<!--added lights -->
+<sdf version='1.7'>
+  <world name='default'>
+    <scene>
+      <sky>
+        <clouds>
+          <speed>12</speed>
+        </clouds>
+      </sky>
+     <ambient>0.5 0.5 0.5 1</ambient>
+      <background>0.5 0.5 0.5 1</background>
+      <shadows>1</shadows>
+    </scene>
+    <physics type='ode'>
+      <ode>
+        <solver>
+          <type>quick</type>
+          <iters>10</iters>
+          <sor>1.3</sor>
+          <use_dynamic_moi_rescaling>0</use_dynamic_moi_rescaling>
+        </solver>
+        <constraints>
+          <cfm>0</cfm>
+          <erp>0.2</erp>
+          <contact_max_correcting_vel>10</contact_max_correcting_vel>
+          <contact_surface_layer>0.001</contact_surface_layer>
+        </constraints>
+      </ode>
+      <real_time_update_rate>1000</real_time_update_rate>
+      <max_step_size>0.001</max_step_size>
+      <real_time_factor>1</real_time_factor>
+    </physics>
+
+    <include>
+      <uri>model://prognodrone</uri>
+    </include>
+
+    <gravity>0 0 -9.81</gravity>
+    <magnetic_field>6e-06 2.3e-05 -4.2e-05</magnetic_field>
+    <atmosphere type='adiabatic'/>
+    <wind/>
+    <spherical_coordinates>
+      <surface_model>EARTH_WGS84</surface_model>
+      <latitude_deg>0</latitude_deg>
+      <longitude_deg>0</longitude_deg>
+      <elevation>0</elevation>
+      <heading_deg>0</heading_deg>
+    </spherical_coordinates>
+    <include>
+      <uri>model://grass_ground_plane</uri>
+    </include>
+    <state world_name='default'>
+      <sim_time>129 331000000</sim_time>
+      <real_time>64 272853559</real_time>
+      <wall_time>1614025469 55758379</wall_time>
+      <iterations>57212</iterations>
+
+      <light name='user_directional_light_0'>
+        <pose>-8.08698 4.69506 1 0 -0.653767 0</pose>
+      </light>
+      <light name='user_spot_light_0'>
+        <pose>35.0376 -0.001219 15 0 -0.8 0</pose>
+      </light>
+      <light name='user_spot_light_0_clone'>
+        <pose>36.5164 -0.037556 35 0 -0.8 0</pose>
+      </light>
+      <light name='user_spot_light_0_clone_0'>
+        <pose>35.1506 0.020596 75 0 -0.8 0</pose>
+      </light>
+      <light name='user_spot_light_0_clone_1'>
+        <pose>35.4852 -1.32431 55 0 -0.8 0</pose>
+      </light>
+    </state>
+
+
+
+    <gui fullscreen='0'>
+      <camera name='user_camera'>
+        <pose>-10.8203 -58.2202 67.076 0 0.867643 1.00739</pose>
+        <view_controller>orbit</view_controller>
+        <projection_type>perspective</projection_type>
+      </camera>
+    </gui>
+    <light name='user_directional_light_0' type='directional'>
+      <pose>-8.08698 4.69506 1 0 -0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0.1 0.1 -0.9</direction>
+      <attenuation>
+        <range>20</range>
+        <constant>0.5</constant>
+        <linear>0.01</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>1</cast_shadows>
+      <spot>
+        <inner_angle>0</inner_angle>
+        <outer_angle>0</outer_angle>
+        <falloff>0</falloff>
+      </spot>
+    </light>
+
+    <light name='user_spot_light_0' type='spot'>
+      <pose>35.0376 -0.001219 1 0 -0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.1 0.1 0.1 1</specular>
+      <direction>0 0 -1</direction>
+      <attenuation>
+        <range>200</range>
+        <constant>0</constant>
+        <linear>0</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <spot>
+        <inner_angle>2</inner_angle>
+        <outer_angle>4</outer_angle>
+        <falloff>1</falloff>
+      </spot>
+    </light>
+    <light name='user_spot_light_0_clone' type='spot'>
+      <pose>36.5164 -0.037556 15 0 -0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.0941176 0.0941176 0.0941176 1</specular>
+      <direction>0 0 -1</direction>
+      <attenuation>
+        <range>200</range>
+        <constant>0</constant>
+        <linear>0</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <spot>
+        <inner_angle>2</inner_angle>
+        <outer_angle>4</outer_angle>
+        <falloff>1</falloff>
+      </spot>
+    </light>
+    <light name='user_spot_light_0_clone_0' type='spot'>
+      <pose>35.1506 0.020596 15 0 -0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.0941176 0.0941176 0.0941176 1</specular>
+      <direction>0 0 -1</direction>
+      <attenuation>
+        <range>200</range>
+        <constant>0</constant>
+        <linear>0</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <spot>
+        <inner_angle>2</inner_angle>
+        <outer_angle>4</outer_angle>
+        <falloff>1</falloff>
+      </spot>
+    </light>
+    <light name='user_spot_light_0_clone_1' type='spot'>
+      <pose>35.4852 -1.32431 15 0 -0 0</pose>
+      <diffuse>1 1 1 1</diffuse>
+      <specular>0.0941176 0.0941176 0.0941176 1</specular>
+      <direction>0 0 -1</direction>
+      <attenuation>
+        <range>200</range>
+        <constant>0</constant>
+        <linear>0</linear>
+        <quadratic>0.001</quadratic>
+      </attenuation>
+      <cast_shadows>0</cast_shadows>
+      <spot>
+        <inner_angle>2</inner_angle>
+        <outer_angle>4</outer_angle>
+        <falloff>1</falloff>
+      </spot>
+    </light>
+
+
+    <include>
+      <pose>50 0 0 0 0 0</pose>
+      <uri>model://overheadpylon</uri>
+    </include>
+  </world>
+</sdf>

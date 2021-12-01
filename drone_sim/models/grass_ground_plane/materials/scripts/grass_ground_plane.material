@@ -1,0 +1,17 @@
+material grass_ground_plane/Diffuse
+{
+  technique
+  {
+    pass
+    {
+      texture_unit
+      {
+	
+        texture grass_ground_plane.jpg 
+        filtering anistropic
+        max_anisotropy 16
+	scale 0.001 0.001 
+      }
+    }
+  }
+}
